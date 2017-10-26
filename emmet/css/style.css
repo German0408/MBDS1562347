@@ -1,0 +1,43 @@
+html{
+	background: linear-gradient(#CA1111,#067D14);
+	height: 100vh;
+}
+body{
+
+	font: 16px Arial; 
+}
+h1{
+	text-align: center;
+	color: #944A4A;
+	font-size: 1.4em;
+	font-weight: normal;
+	margin: 0px auto;
+	padding: 10px;
+	width: 420px;
+}
+section{
+	background-color: #3FA48B;
+	margin: 0px auto;
+	padding: 20px;
+	width: 500px;
+}
+section div{
+	border: 1px solid #FFFFFF;
+	padding: 10px;
+	margin-bottom: 4px;
+}
+section div.ejemplo{
+
+	background-color: #2E8C97;
+	text-align: center;
+	transition: all 0.5;
+}
+section div.ejemplo:hover{
+	background-color: #349DA6;
+	cursor: pointer; 
+}
+section div.resultado{
+	background-color: #FFFFFF;
+
+}
+

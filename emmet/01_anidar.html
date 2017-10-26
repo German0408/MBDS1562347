@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Anidar elementos ( > )</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Anidar elementos ( > )</h1>
+	<section>
+		<div class="ejemplo">
+			ul>li>a>img
+		</div>
+		<div class="resultado">
+<xmp>
+<ul>
+	<li><a href=""><img src="" alt=""></a></li>
+</ul>
+</xmp>	
+		</div>
+		
+		</section>
+		<h1>Elementos hermano ( + )</h1>
+	<section>
+		<div class="ejemplo">
+			ul>li>a>img
+		</div>
+		<div class="resultado">
+<xmp>
+<ul>
+	<li><a href=""><img src="" alt=""></a></li>
+</ul>
+</xmp>	
+		</div>
+		
+		</section>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			
+			$('.resultado').hide();
+			$('section').on('click', '.ejemplo', function(event) {
+				event.preventDefault();
+				/* Act on the event */
+				$(this).next('.resultado').slideToggle('slow');
+			});
+			
+		});
+	</script>
+</body>
+</html>
