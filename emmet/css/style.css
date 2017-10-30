@@ -1,6 +1,6 @@
 html{
 	background: linear-gradient(#CA1111,#067D14);
-	height: 100vh;
+	height: 10vh;
 }
 body{
 
@@ -8,7 +8,7 @@ body{
 }
 h1{
 	text-align: center;
-	color: #944A4A;
+	color: #FFFFFF;
 	font-size: 1.4em;
 	font-weight: normal;
 	margin: 0px auto;
@@ -38,6 +38,5 @@ section div.ejemplo:hover{
 }
 section div.resultado{
 	background-color: #FFFFFF;
-
 }
 
