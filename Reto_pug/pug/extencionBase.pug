@@ -1,0 +1,62 @@
+extends pugBase.pug
+
+block script
+	mixin nav(classname,url,texto,classname2)
+		ul(classname2=classname2)
+			li(class=classname)
+				a(href=url) texto
+
+	ul('nav navbar-nav navbar-right main-nav')
+		+nav("active","#intro","Home")
+		+nav("","#services","About Us")
+		+nav("","#team","Cleaning Services")
+		+nav("","#pricing","Pricing")
+		+nav("","#contact","Contact")
+
+
+
+	- var authorised = true;
+
+	dir.container-fluid
+		if authorised
+			dir(class="row")
+				dir(class="col-md-12")
+					dir(class="team text-center")
+						dir(class="cover",style="background:url('img/team/team-cover1.jpg'); background-size:cover;")
+							dir(class="overlay text-center")
+								h3(class="white") $69.00
+								h5(class="light light-white") 1 - 5 sessions / month 
+			
+		else
+			dir(class="row")
+				dir(class="col-md-12")
+					dir(class="team text-center")
+						dir(class="cover",style="background:url('img/team/team-cover1.jpg'); background-size:cover;")
+							dir(class="overlay text-center")
+								h3(class="white") $90.00
+								h5(class="light light-white") 5 - 10 sessions / month
+
+
+
+
+	div(class="container-fluid") 
+		div(class="row services")
+			-var n = 0;
+			-var m = 0; 
+			ul
+				while n < 3
+					div(class="col-md-4")
+						div(class="service")
+							div(class="icon-holder")
+								img(src="img/icons/heart-blue.png",alt="",class="icon")
+							h4(class="heading") Cardio Training
+							p(class="description") A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.
+					-var m=n++
+	
+	include quinto.pug
+
+	script(src="js/jquery-1.11.1.min.js")
+	script(src="js/owl.carousel.min.js")
+	script(src="src=js/bootstrap.min.js")
+	script(src="js/jquery.onepagenav.js")
+	script(src="js/main.js")
